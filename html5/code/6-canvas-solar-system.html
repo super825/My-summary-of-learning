@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>canvas实例2-太阳系</title>
+    <style type="text/css">
+        #canvas {
+            background: #000;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="1000" height="1000">
+        您的浏览器不支持 Canvas!
+    </canvas>
+    <script>
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+
+        //画轨道
+        function drawTrack() {
+            for (var i = 0; i < 8; i++) {
+                ctx.save();
+                ctx.lineWidth = 1;
+                ctx.strokeStyle = "#fff";
+                ctx.translate(500, 500);
+                ctx.beginPath();
+                ctx.arc(0, 0, (i + 1) * 50, 0, 360);
+                ctx.closePath();
+                ctx.stroke();
+                ctx.restore();
+            }
+        }
+
+        //画星球
+        function Star(x, y, radius, cycle, startColor, endColor) {
+            var self = {
+                x: x,
+                y: y,
+                radius: radius,
+                cycle: cycle,
+                startColor: startColor,
+                endColor: endColor,
+                time: 0
+            }
+
+            self.draw = function () {
+                ctx.save();
+                //重置原点
+                ctx.translate(500, 500);
+                //旋转角度
+                ctx.rotate(self.time * (360 / self.cycle) * Math.PI / 180);
+                ctx.beginPath();
+                ctx.arc(self.x, self.y, self.radius, 0, 360);
+                ctx.closePath();
+                //径向渐变
+                var grd = ctx.createRadialGradient(self.x, self.y, self.radius / 2, self.x, self.y, radius);
+                grd.addColorStop(0, self.startColor);
+                grd.addColorStop(1, self.endColor);
+                ctx.fillStyle = grd;
+                ctx.fill();
+                ctx.restore();
+                self.time += 1;
+            }
+            return self;
+        }
+        //太阳
+        function Sun() {
+            return Star(0, 0, 20, 0, "#FFFF00", "#FF9900");
+        }
+        //水星
+        function Mercury() {
+            return Star(0, -50, 10, 87.70, "#A69697", "#5C3E40");
+        }
+        //金星
+        function Venus() {
+            return Star(0, -100, 10, 224.701, "#C4BBAC", "#1F1315");
+        }
+        //地球
+        function Earth() {
+            return Star(0, -150, 10, 365.2422, "#78B1E8", "#050C12");
+        }
+        //火星
+        function Mars() {
+            return Star(0, -200, 10, 686.98, "#CEC9B6", "#76422D");
+        }
+        //木星
+        function Jupiter() {
+            return Star(0, -250, 10, 4332.589, "#C0A48E", "#322222");
+        }
+        //土星
+        function Saturn() {
+            return Star(0, -300, 10, 10759.5, "#F7F9E3", "#5C4533");
+        }
+        //天王星
+        function Uranus() {
+            return Star(0, -350, 10, 30799.095, "#A7E1E5", "#19243A");
+        }
+        //海王星
+        function Neptune() {
+            return Star(0, -400, 10, 60152, "#0661B2", "#1E3B73");
+        }
+
+        var sun = Sun();
+        var mercury = Mercury();
+        var venus = Venus();
+        var earth = Earth();
+        var mars = Mars();
+        var jupiter = Jupiter();
+        var saturn = Saturn();
+        var uranus = Uranus();
+        var neptune = Neptune();
+
+        setInterval(function () {
+            ctx.clearRect(0, 0, 1000, 1000);
+            drawTrack();
+            sun.draw();
+            mercury.draw();
+            venus.draw();
+            earth.draw();
+            mars.draw();
+            jupiter.draw();
+            saturn.draw();
+            uranus.draw();
+            neptune.draw();
+        }, 1000/24);
+    </script>
+</body>
+
+</html>

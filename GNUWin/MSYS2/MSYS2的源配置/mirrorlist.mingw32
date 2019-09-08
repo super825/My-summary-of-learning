@@ -1,0 +1,20 @@
+##
+## 32-bit Mingw-w64 repository mirrorlist
+##
+
+## Primary
+## msys2.org
+#Server = http://repo.msys2.org/mingw/i686
+#Server = http://downloads.sourceforge.net/project/msys2/REPOS/MINGW/i686
+#Server = http://www2.futureware.at/~nickoe/msys2-mirror/i686/
+
+#中国科学技术大学开源软件镜像
+Server = http://mirrors.ustc.edu.cn/msys2/mingw/i686/
+#清华大学开源软件镜像
+Server = https://mirrors.tuna.tsinghua.edu.cn/msys2/mingw/i686
+#北京理工大学开源软件镜像
+Server = http://mirror.bit.edu.cn/msys2/REPOS/MINGW/i686
+#日本北陆先端科学技术大学院大学 sourceforge 镜像
+Server = http://jaist.dl.sourceforge.net/project/msys2/REPOS/MINGW/i686
+Server = ftp://ftp.jaist.ac.jp/pub/sourceforge/m/ms/msys2/REPOS/MINGW/i686
+#Include = /etc/pacman.d/mirrorlist.mingw32

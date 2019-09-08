@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>结构性伪类选择符 E:only-of-type</title>
+		<style>
+			dt:only-of-type{color:#f00;font-size:30px}
+		</style>
+	</head>
+	<body>
+		<dialog>
+			<dt>李明：</dt>
+			<dd>不认真学习的孩纸都是耍流氓！</dd>
+		</dialog>
+		
+		<!--
+			当指定元素是其父元素的唯一一个指定类型元素的时候可以选中该子元素
+			该实例中:dt是 dt的父元素dialog中唯一的一个dt元素，所以可以选中
+		-->
+	</body>
+</html>
+			

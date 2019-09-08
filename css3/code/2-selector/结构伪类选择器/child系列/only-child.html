@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<title>结构性伪类选择符 E:only-child</title>
+		<style>
+			li:only-child{color:#f00;font-size:30px}
+		</style>
+	</head>
+	<body>
+		<ul id="A">
+			<li>我是父元素ul的唯一的子元素，独生子</li>
+		</ul>
+		
+		<hr />
+		
+		<ul id="B">
+			<li>我是父亲的第一个孩子，我不是独生子</li>
+			<li>我是父亲的第二个孩子，我不是独生子</li>
+		</ul>
+		
+		<!--
+			当且仅当当指定元素是其父元素的唯一子元素的时候可以选中该子元素
+		-->
+	</body>
+</html>
+			

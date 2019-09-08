@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>canvas画布的使用</title>
+    <style type="text/css">
+        #canvas {
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="800" height="600">
+        您的浏览器不支持 Canvas!
+    </canvas>
+    <script>
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+        ctx.save();
+        //画一条线段
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "blue";
+        ctx.beginPath();
+        ctx.moveTo(50, 20);
+        ctx.lineTo(150, 20);
+        ctx.closePath();
+        ctx.stroke();
+        //画一个圆形
+        ctx.beginPath();
+        ctx.arc(100, 100, 50, 0, Math.PI * 2);
+        ctx.closePath();
+        ctx.stroke();
+        //画一个矩形
+        ctx.beginPath();
+        ctx.strokeRect(50, 180, 100, 100);
+        ctx.closePath();
+        //写一段文字画布中
+        ctx.font = '40px Arial';
+        ctx.fillStyle = 'red';
+        ctx.textAlign = 'left';
+        ctx.textBaseline = 'top';
+        ctx.fillText('canvas', 50, 300);
+        ctx.strokeText('canvas', 50, 350);
+        //将一幅图片添加到画布中
+        // var imageObj = new Image();
+        // imageObj.onload = function () {
+        //     ctx.drawImage(imageObj, 200, 20);
+        // };
+        // imageObj.src = '../img/html5-canvas-composite-operations.png';
+        ctx.restore();
+        //反转图片
+        ctx.translate(200, 50);
+        ctx.rotate(-10 * Math.PI / 180);
+        var imageObj = new Image();
+        imageObj.onload = function () {
+            ctx.drawImage(imageObj, 0, 0);
+        };
+        imageObj.src = '../img/html5-canvas-composite-operations.png';
+
+    </script>
+</body>
+
+</html>

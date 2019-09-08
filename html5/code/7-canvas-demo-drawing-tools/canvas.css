@@ -1,0 +1,183 @@
+/*页面公共属性设置*/
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+body {
+    background: #ABCDEF
+}
+
+/*页面顶部属性设置*/
+#header {
+    width: 900px;
+    height: 80px;
+    font-size: 40px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 80px
+}
+
+/*页面中间部分(画图板)属性*/
+#content {
+    width: 880px;
+    height: 550px;
+    background: gray;
+    margin: 0 auto;
+    padding: 10px
+}
+
+#tool {
+    height: 150px;
+    text-align: center
+}
+
+#tool li {
+    float: left;
+    width: 175px;
+    height: 140px;
+    background: #ccc;
+    border-right: 1px solid red
+}
+
+#image {
+    text-align: left;
+    padding: 20px
+}
+
+#image li {
+    height: 30px;
+    width: 100px;
+    list-style: square inside;
+    border: 0
+}
+
+#image li button {
+    background: gray;
+    border: 1px solid #000
+}
+
+#image li button:hover {
+    background: gray;
+    border: 1px solid #FFF
+}
+
+#means,
+#shape {
+    padding: 20px
+}
+
+#means li,
+#shape li {
+    height: 20px;
+    width: 40px;
+    border: 1px solid #000;
+    margin-bottom: 10px
+}
+
+#means li:hover,
+#shape li:hover {
+    height: 20px;
+    width: 40px;
+    border: 1px solid #fff;
+    margin-bottom: 10px
+}
+
+#means img,
+#shape img {
+    height: 20px;
+    width: 20px
+}
+
+#size {
+    padding: 10px
+}
+
+#size li {
+    height: 20px;
+    width: 120px;
+    border: 1px solid #ccc
+}
+
+#size li:hover {
+    height: 20px;
+    width: 120px;
+    border: 1px solid #FFF
+}
+
+#color {
+    padding: 25px
+}
+
+#color li {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    margin-bottom: 10px;
+    margin-right: 3px
+}
+
+#color li:hover {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #fff;
+    margin-bottom: 10px;
+    margin-right: 3px
+}
+
+#color #red {
+    background: red
+}
+
+#color #green {
+    background: green
+}
+
+#color #blue {
+    background: blue
+}
+
+#color #yellow {
+    background: yellow
+}
+
+#color #white {
+    background: white
+}
+
+#color #black {
+    background: black
+}
+
+#color #pink {
+    background: pink
+}
+
+#color #purple {
+    background: purple
+}
+
+#color #cyan {
+    background: cyan
+}
+
+#color #orange {
+    background: orange
+}
+
+#canvas {
+    background: white
+}
+
+#canvas:hover {
+    cursor: crosshair
+}
+
+/*页面底部属性设置*/
+#footer {
+    width: 900px;
+    height: 30px;
+    margin: 0 auto;
+    text-align: center
+}

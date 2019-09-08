@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<style>
+			p{	text-align:start;
+				border:1px solid red;
+				direction:rtl;/*将文档流变成从右向左书写*/
+				unicode-bidi:bidi-override;
+				}
+		</style>
+	</head>
+	<body>
+		<p>看看我在哪里，左边还是右边还是中间捏？</p>
+		<!--
+			在从左向右书写的文字中，左是开始,右是结束(汉语、英语)
+			left=start  right=end
+			在从右向左书写的文字中，右是开始,左是结束(维语)
+			left=end  	right=start
+		--->
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<style>
+			div{
+				margin:100px;
+				width:200px;
+				height:100px;
+				background:#ccc;
+			}
+			#left-top{
+				-webkit-box-shadow:-10px -10px;/*实验性质的浏览器写法*/
+				box-shadow:-10px -10px;/*实现W3C的标准*/
+			}
+			
+			#right-top{
+				box-shadow:10px -10px;
+			}
+			
+			#right-bottom{
+				box-shadow:10px 10px;
+			}
+			
+			#left-bottom{
+				box-shadow:-10px 10px;
+			}
+			
+			#rouhe{
+				box-shadow:10px 10px 10px;
+			}
+			
+			#color{
+				box-shadow:10px 10px 10px #ABCDEF
+			}
+		</style>
+	</head>
+	<body>
+		<div id="left-top">
+			left-top
+		</div>
+		
+		<div id="right-top">
+			right-top
+		</div>
+		
+		<div id="right-bottom">
+			right-bottom
+		</div>
+		
+		<div id="left-bottom">
+			left-bottom
+		</div>
+		
+		<div id="rouhe">
+			柔和属性
+		</div>
+		
+		<div id="color">
+			彩色阴影
+		</div>
+	</body>
+</html>

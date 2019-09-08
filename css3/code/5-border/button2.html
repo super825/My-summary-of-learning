@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<style>
+			.button{
+				width:200px;
+				height:100px;
+				background:#CCC;
+				box-shadow:5px 5px;
+				font-size:30px;
+				line-height:100px;
+				text-align:center;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="button">
+			这就是爱
+		</div>
+		<script>	
+			//选中页面中的元素
+			var button=document.getElementsByTagName('div')[0];
+			//注册事件（按下鼠标事件）
+			button.onmousedown=function(){
+				//修改阴影效果
+				this.style.boxShadow='5px 5px inset';
+				//修改文字效果
+				this.style.lineHeight='90px';
+			}
+			//注册事件(松开鼠标事件)
+			button.onmouseup=function(){
+				this.style.boxShadow='5px 5px';
+				this.style.lineHeight='100px';
+			}
+			
+			//注册事件(鼠标移出事件)
+			button.onmouseout=function(){
+				this.style.boxShadow='5px 5px';
+				this.style.lineHeight='100px';
+			}
+			
+		</script>
+		
+	</body>
+</html>

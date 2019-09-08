@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html5语义化标签布局</title>
+    <style type="text/css">
+        header {
+            height: 40px;
+            line-height: 40px;
+            width: 100%;
+            background-color: cadetblue;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            height: 40px;
+            line-height: 40px;
+            width: 100%;
+            background-color: darkcyan;
+            margin-bottom: 10px;
+        }
+
+        div.content {
+            height: 800px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        aside {
+            height: 800px;
+            float: left;
+            width: 29%;
+            background-color: olive
+        }
+
+        section {
+            height: 800px;
+            float: right;
+            width: 70%;
+            background-color: coral;
+        }
+
+        footer {
+            height: 40px;
+            line-height: 40px;
+            width: 100%;
+            clear: both;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <header>header标记定义一个页面或一个区域的头部</header>
+    <nav>nav标记定义导航链接</nav>
+    <div class="content">
+        <aside>
+            <p>aside标记定义页面内容部分的侧边栏</p>
+            <hr>
+            <meter value="3" min="0" max="10">3/10</meter><br>
+            <meter value="0.6">60%</meter><br>
+            <hr>
+            <progress value="22" max="100"></progress><br>
+            <!-- <menu>
+                <command onclick="alert('Hello World')">Click Me!</command>
+            </menu> -->
+            <hr>
+            <input list="cars" />
+            <datalist id="cars">
+                <option value="BMW">
+                <option value="Ford">
+                <option value="Volvo">
+            </datalist>
+            <hr>
+            <details>
+                <summary>Copyright 2011.</summary>
+                <p>All pages and graphics on this web site are the property of W3School.</p>
+            </details>
+            <hr>
+            <ruby>
+                漢 <rt> ㄏㄢˋ </rt>
+            </ruby>
+            <hr>
+            <p>Do not forget to buy <mark>milk</mark> today.</p>
+            <hr>
+            <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+                <input type="range" id="a" value="50">100
+                +<input type="number" id="b" value="50">
+                =<output name="x" for="a b"></output>
+            </form>
+            <p><b>注释：</b>Internet Explorer 不支持 <output> 标签。</p>
+            <hr>
+            <p>
+                我们在每天早上 <time>9:00</time> 开始营业。
+            </p>
+            <p>
+                我在 <time datetime="2010-02-14">情人节</time> 有个约会。
+            </p>
+            <hr>
+            <b>代表内联文本，通常是粗体，没有传递表示重要的意思</b><br />
+            <i>代表内联文本，通常是斜体，没有传递表示重要的意思</i><br />
+            <small>表示小字体，例如打印注释或者法律条款</small><br />
+            <strong>表示重要性而不是强调符号</strong><br />
+            <dd>可以同details与figure一同使用，定义包含文本，dialog也可用</dd><br />
+            <dt>可以同details与figure一同使用，汇总细节，dialog也可用</dt><br />
+        </aside>
+        <section>
+            <div>section标记定义一个区域</div>
+            <hr>
+            <article>
+                <h3>文章标题</h3>
+                <p>文章内容</p>
+            </article>
+            <hr>
+            <hgroup>
+                <h3>文章标题1</h3>
+                <h4>文章标题2</h4>
+            </hgroup>
+            <hr>
+            <figure>
+                <figcaption>黄浦江上的的卢浦大桥</figcaption>
+                <p>拍摄者：W3School 项目组，拍摄时间：2010 年 10 月</p>
+                <img src="../img/html5-layout.png" width="350" height="234" />
+            </figure>
+            <hr>
+            <dialog open>这是打开的对话窗口</dialog>
+            <!-- <menu type="toolbar">
+                <li>
+                    <menu label="File">
+                        <button type="button" onclick="file_new()">新建</button>
+                        <button type="button" onclick="file_open()">打开</button>
+                        <button type="button" onclick="file_save()">保存</button>
+                    </menu>
+                </li>
+                <li>
+                    <menu label="Edit">
+                        <button type="button" onclick="edit_cut()">剪切</button>
+                        <button type="button" onclick="edit_copy()">复制</button>
+                        <button type="button" onclick="edit_paste()">粘贴</button>
+                    </menu>
+                </li>
+            </menu>
+            <p><b>注释：</b>所有主流浏览器均不支持 menu 元素。</p> -->
+        </section>
+    </div>
+    <footer>footer标记定义一个页面或一个区域的底部</footer>
+</body>
+
+</html>

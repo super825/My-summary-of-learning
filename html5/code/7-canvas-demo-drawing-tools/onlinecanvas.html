@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>HTML5在线画图板</title>
+		<link href="canvas.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<header id="header">HTML5在线画板</header>
+		<section id="content">
+			<!--工具区域-->
+			<ul id="tool">
+				<li>
+					<h3>图像</h3>
+					<hr />
+					<ul id="image">
+						<li id="saveimg">
+							<form id="myform" action="http://localhost/down.php" method="post">
+							<input type="hidden" id="data" name="data" value="" />
+							<button onclick="saveimg()" type="button">保存图片</button>
+							</form>
+							</li>
+						<li id="clearimg"><button onclick="clearimg()">清空画板</button></li>
+					</ul>
+				</li>
+				<li>
+					<h3>工具</h3>
+					<hr />
+					<ul id="means">
+						<li id="means_brush" onclick="drawBrush(0)">
+							<img src="images/Brush.png" />
+						</li>
+						<li id="means_eraser" onclick="drawEraser(1)">
+							<img src="images/Eraser.png" />
+						</li>
+						<li id="means_paint" onclick="drawPaint(2)">
+							<img src="images/Paint.png" />
+						</li>
+						<li id="means_straw" onclick="drawStraw(3)">
+							<img src="images/Straw.png" />
+						</li>
+						<li id="means_text" onclick="drawText(4)">
+							<img src="images/text.png" />
+						</li>
+						<li id="means_magnifier" onclick="drawMagnifier(5)"><img src="images/Magnifier.png" /></li>
+					</ul>
+				</li>
+				<li>
+					<h3>形状</h3>
+					<hr />
+					<ul id="shape">
+						<li id="shape_line" onclick="drawLine(6)">
+							<img src="images/line.png" />
+						</li>
+						<li id="shape_arc" onclick="drawArc(7)">
+							<img src="images/arc.png" />
+						</li>
+						<li id="shape_rect" onclick="drawRect(8)">
+							<img src="images/rect.png" />
+						</li>
+						<li id="shape_poly" onclick="drawPoly(9)">
+							<img src="images/poly.png" />
+						</li>
+						<li id="shape_arcfill" onclick="drawArcFill(10)">
+							<img src="images/arcfill.png" />
+						</li>
+						<li id="shape_rectfill" onclick="drawRectFill(11)">
+							<img src="images/rectfill.png" />
+						</li>
+					</ul>
+				</li>
+				<li>
+					<h3>线宽</h3>
+					<hr />
+					<ul id="size">
+						<li id="width_1" onclick="setLineWidth(0)">
+							<img src="images/line1px.png" />
+						</li>
+						<li id="width_3" onclick="setLineWidth(1)">
+							<img src="images/line3px.png" />
+						</li>
+						<li id="width_5" onclick="setLineWidth(2)">
+							<img src="images/line5px.png" />
+						</li>
+						<li id="width_8" onclick="setLineWidth(3)">
+							<img src="images/line8px.png" />
+						</li>
+					</ul>
+				</li>
+				<li>
+					<h3>颜色</h3>
+					<hr />
+					<ul id="color">
+						<li id="red" onclick="setColor(this,0)"></li>
+						<li id="green" onclick="setColor(this,1)"></li>
+						<li id="blue" onclick="setColor(this,2)"></li>
+						<li id="yellow" onclick="setColor(this,3)"></li>
+						<li id="white" onclick="setColor(this,4)"></li>
+						<li id="black" onclick="setColor(this,5)"></li>
+						<li id="pink" onclick="setColor(this,6)"></li>
+						<li id="purple" onclick="setColor(this,7)"></li>
+						<li id="cyan" onclick="setColor(this,8)"></li>
+						<li id="orange" onclick="setColor(this,9)"></li>
+					</ul>
+				</li>
+			</ul>
+			<!--绘图区域-->
+			<canvas id="canvas" width="880" height="400">
+				您的浏览器不支持canvas标签，请升级浏览器
+			</canvas>
+			<!--请在canvas标签之后连入JS文件--->
+			<script src="canvas.js"></script>
+		</section>
+		<footer id="footer">
+			<small>版权所有，盗版不究</small>
+		</footer>
+	</body>
+</html>

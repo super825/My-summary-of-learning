@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			input:disabled{background:yellow;color:green}
+			input:enabled{background:#f90;color:red}
+			input:checked+span{background:red}
+			
+			/*以上三个选择器都是针对表单做的提升修改*/
+		</style>
+	</head>
+	<body>
+		<form method="post" action="#">
+		<fieldset>
+			<legend>disabled和enabled</legend>
+			<ul>
+				<li>
+					<label>
+						<input type="text" name="id" value="99" disabled /><span>ID</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="text" name="user" value=""  />
+						<!--input的默认状态具有 enabled属性-->
+						<span>昵称</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="text" name="pwd" value="" enabled />
+						<span>密码</span>
+					</label>
+				</li>
+			</ul>
+		</fieldset>
+		<fieldset>
+			<legend>选中下面的项试试(单选按钮)</legend>
+			<ul>
+				<li><label><input type="radio" name="sex" value="0" /><span>蓝色</span></label></li>
+				<li><label><input type="radio" name="sex" value="1" /><span>红色</span></label></li>
+				<li><label><input type="radio" name="sex" value="2" /><span>黑色</span></label></li>
+			</ul>
+		</fieldset>
+		<fieldset>
+			<legend>选中下面的项试试(多选按钮)</legend>
+			<ul>
+				<li><label><input type="checkbox" name="like" value="0" /><span>蓝色</span></label></li>
+				<li><label><input type="checkbox" name="like" value="1" /><span>红色</span></label></li>
+				<li><label><input type="checkbox" name="like" value="2" checked /><span>黑色</span></label></li>
+			</ul>
+		</fieldset>
+		</form>
+</body>
+</html>
+			

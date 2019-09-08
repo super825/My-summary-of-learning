@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>智能表单</title>
+</head>
+
+<body>
+    <form action="/example/html5/demo_form.asp" method="POST" id="register"></form>
+
+    邮箱：<input type="email" name="email" value="" from="register" /><br />
+
+    网址：<input type="url" name="url" value="" from="register" /><br />
+
+    日期：<input type="date" name="date" value="" from="register" /><br />
+    时间：<input type="time" name="time" value="" from="register" /><br />
+    月份：<input type="month" name="month" value="" from="register" /><br />
+    周数：<input type="week" name="week" value="" from="register" /><br />
+    日期时间：<input type="datetime" name="week" value="" from="register" /><br />
+    本地日期时间：<input type="datetime-local" name="week" value="" from="register" /><br />
+
+    数字：<input type="number" min="1" max="10" name="number" value="" from="register" /><br />
+    范围：<input type="range" min="1" max="10" name="range" value="" from="register" /><br />
+
+    搜索：<input type="search" name="movie" list="movieList" value="" from="register" /><br />
+    <datalist id="movieList">
+        <option>火星救援</option>
+        <option>星际穿越</option>
+        <option>平行时空</option>
+    </datalist>
+
+    颜色：<input type="color" name="color" value="" from="register" /><br />
+
+    <input type="submit" name="submit" value="提交" from="register" /><br />
+
+    <form oninput="res.value=no1.value*no2.value">
+        <input type="text" name="no1"> * <input type="text" name="no2"> = <output name="res"></output>
+    </form>
+</body>
+
+</html>
